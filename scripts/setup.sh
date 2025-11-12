@@ -58,12 +58,26 @@ packages=(
     "ttf-fira-sans"
     "ttf-firacode-nerd"
     "thunar"
+    "tumbler"
     "yazi"
     "tar"
     "7zip"
     "pinta"
     "wev"
-    
+    "wget"
+    "rsync"
+    "qt6ct"
+    "qt5ct"
+    "nwg-look"
+    "rsync"
+    "vlc"
+    "figlet"
+    "fzf"
+    "starship"
+    "zoxide"
+    "udiskie"
+    "electron"
+    "wisdom-tree"
 
 )
 
