@@ -50,13 +50,11 @@ packages=(
     "btop"
 )
 
-# Install Yay if it is not already installed.
-if command -v yay > /dev/null; then
-    print_info "Skipping yay installation (already installed)."
-elif run_command "pacman -S --noconfirm --needed git base-devel" "Check: yay prereqs" "no" "yes"; then
-    run_command "git clone https://aur.archlinux.org/yay.git && cd yay" "Clone: yay" "no" "no"
-    run_command "makepkg --noconfirm -si && cd .." "Make: yay" "no" "no"
-fi
+# Install Yay
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg --noconfirm -si
+cd ..
 
 # Install the packages using yay
 yay -S --noconfirm "${packages[@]}"
