@@ -48,6 +48,23 @@ packages=(
     "vscodium"
     "nano"
     "btop"
+    "ufw"
+    "tufw"
+    "fastfetch"
+    "ttf-nerd-fonts-symbols"
+    "ttf-nerd-fonts-symbols-mono"
+    "ttf-fira-code"
+    "ttf-fira-mono"
+    "ttf-fira-sans"
+    "ttf-firacode-nerd"
+    "thunar"
+    "yazi"
+    "tar"
+    "7zip"
+    "pinta"
+    "wev"
+    
+
 )
 
 # Install Yay
