@@ -10,6 +10,7 @@
 # This script assumes the following is true: A minimal Arch install via archinstall script,
 # Dank Linux setup has been completed: curl -fsSL https://install.danklinux.com | sh
 # Dank Linux settings chosen: Hyprland and Ghostty
+# Dotdrop will use the default profile, switch profiles with 'COMMAND'
 
 ##### [ Configuration Check List ] ######################## [ Status ]
 # Add hyprland to bash_profile for tty1 login                 [ Done ]
@@ -22,17 +23,16 @@
 # Copy over Wallpapers folder                                 [ Done ]
 ######################################################################
 ##### [ Dotdrop Check List ] ############################## [ Status ]
-# DarkMateruialShell config                                 [  ]
-# Hyprland Config                                           [  ]
-# btop                                                      [  ]
-# fastfetch                                                 [  ]
-# ghostty                                                   [  ]
-# nano                                                      [  ]
-# udiskie                                                   [  ]
-# starship                                                  [  ]
-# yazi                                                      [  ]
-# ufw                                                       [  ] 
-
+# DarkMateruialShell                                          [ Done ]
+# Hyprland                                                    [ Done ]
+# Btop                                                        [ Done ]
+# Fastfetch                                                   [ Done ]
+# Ghostty                                                     [ Done ]
+# Nano                                                        [ Done ]
+# Udiskie                                                     [ Done ]
+# Starship                                                    [ Done ]
+# Yazi                                                        [ Done ]
+# Ufw                                                         [ Done ] 
 ######################################################################
 ##### [ App Launcher Check List ] ######################### [ Status ]
 # btop                                       [  ]
