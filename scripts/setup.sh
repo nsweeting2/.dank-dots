@@ -86,7 +86,8 @@ yay -S --noconfirm "${aur[@]}"
 # Install all defined pacman packages
 # NONE YET
 
-# Dotdrop will link all the dotfiles on reboot
+# Dotdrop update
+# dotdrop update
 
 # Copy over Wallpapers folder
 mkdir -p ~/Wallpapers

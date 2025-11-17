@@ -55,3 +55,23 @@ profiles:
     - f_ghostty
     - f_udiskie
     - f_nano
+  defiant:
+    dotfiles:
+    - f_dms_default
+    - f_hyprland_defiant
+    - f_hyprland_defiant_monitors
+    - f_btop
+    - f_fastfetch
+    - f_ghostty
+    - f_udiskie
+    - f_nano
+  dauntless:
+    dotfiles:
+    - f_dms_default
+    - f_hyprland_dauntless
+    - f_hyprland_dauntless_monitors
+    - f_btop
+    - f_fastfetch
+    - f_ghostty
+    - f_udiskie
+    - f_nano
