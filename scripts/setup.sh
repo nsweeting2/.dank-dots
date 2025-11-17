@@ -2,7 +2,7 @@
 # ~/.dank-dots/scripts/setup.sh
 #
 
-# !/bin/bash
+# !/bin/sh
 
 # Author: nsweeting2
 # This script is meant to be run on a fresh setup but I have endevored to make it idempotent
@@ -61,7 +61,7 @@ function backup {
 
 # File symlink function, symlinks file to .dank-files
 function symlink {
-    if [ ! -f $1 ]; then ln -s $1 $2; fi
+    if [ ! -f $1 ]; then ln -snf $1 $2; fi
 }
 
 # The overall line succeeds, and set -e is not triggered.
