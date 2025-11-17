@@ -39,22 +39,28 @@
 # yazi
 # zoxide
 # ?. Copy over Wallpapers folder
+# Symlink the generic wallpaper
 # Copy over bashrc and bashprofile
 
 # Exit the script if anything fails
 set -e
 
+# File backup function, moves file to be an in place .bak
+function backup {
+    if [ -f $1 ]; then mv $1 "${1}.bak"; fi
+}
 
-# The overall line succeeds, and set -e is not triggered.
-which yay || true 
+# File symlink function, symlinks file to .dank-files
+function symlink {
+    if [ ! -f $1 ]; then ln -s $1 $2
+}
 
-# Now you can check the result of 'which yay' in the next line if needed
-if ! which yay > /dev/null 2>&1; then
-    # Clone yay Repo
-    git clone https://aur.archlinux.org/yay.git
+# Clone yay Repo
+git clone https://aur.archlinux.org/yay.git
 
-    # Run makepkg form yay repo
-    cd yay && makepkg --noconfirm -si ; cd ..
+# Run makepkg form yay repo
+cd yay && makepkg --noconfirm -si ; cd ..
+
 fi
 
 # Define all packages to be installed via yay
@@ -96,61 +102,59 @@ packages=(
 # Install all defined YAY packages
 yay -S --noconfirm "${packages[@]}"
 
-# File backup function, moves file to be an in place .bak
-function backup {
-    if [ -f $1 ]; then mv $1 "${1}.bak"; fi
-}
-
-# File symlink function, symlinks file to .dank-files
-function symlink {
-    if [ ! -f $1 ]; then ln -s $1 $2
-}
-
 # Backup DankMaterialShell settings.json, then symlink from .dank-dots
 default_file = "~/.config/DankMaterialShell/settings.json"
 dank_file = "~/.dank-dots/.config/DankMaterialShell/settings.json"
-backup $default_file; sync; symlink $default_file $dank_file
+backup $default_file
+symlink $default_file $dank_file
 
 # Backup Hypr .conf files, then symlink from .dank-dots
 default_file = "~/.config/hypr/hyprland.conf"
 dank_file = "~/.dank-dots/.config/hypr/hyprland.conf"
-backup $default_file; sync; symlink $default_file $dank_file
+backup $default_file
+symlink $default_file $dank_file
 
 # Backup ghostty config, then symlink from .dank-dots
-# default_file = "~/.config/ghostty/config"
-# dank_file = "~/.dank-dots/.config/ghostty/config"
-# backup $default_file; sync; symlink $default_file $dank_file
+default_file = "~/.config/ghostty/config"
+dank_file = "~/.dank-dots/.config/ghostty/config"
+backup $default_file
+symlink $default_file $dank_file
 
 # Backup btop config, then symlink from .dank-dots
-# default_file = "~/.config/btop/btop.conf"
-# dank_file = "~/.dank-dots/.config/btop/btop.conf"
-# backup $default_file; sync; symlink $default_file $dank_file
+default_file = "~/.config/btop/btop.conf"
+dank_file = "~/.dank-dots/.config/btop/btop.conf"
+backup $default_file
+symlink $default_file $dank_file
 
-# Add btop to app launcher
+# Symlink btop.desktop for app launcher
+dank_file="$HOME/.dank-dots/applications/btop.desktop"
+destination_file="$HOME/.local/share/applications/btop.desktop"
+backup $default_file
+symlink $dank_file $destination_file
 
 # Copy over btop/themes folder from .dank-dots
-# mkdir -p ~/.config/btop/themes
-# cp -rp ~/.dank-dots/btop/themes/* ~/.config/btop/themes
+mkdir -p ~/.config/btop/themes
+cp -rp ~/.dank-dots/btop/themes/* ~/.config/btop/themes
 
 # Symlink fastfetch config from .dank-dots (No default config)
-# default_file = "~/.config/fastfetch/config.jsonc"
-# dank_file = "~/.dank-dots/.config/fastfetch/config.jsonc"
-# backup $default_file; sync; 
-# symlink $default_file $dank_file
+default_file = "~/.config/fastfetch/config.jsonc"
+dank_file = "~/.dank-dots/.config/fastfetch/config.jsonc"
+# backup $default_file
+symlink $default_file $dank_file
 
 # Add fastfetch to app launcher
 
 # Symlink nano config from .dank-dots (No default config)
-# default_file = "~/.nanorc"
-# dank_file = "~/.dank-dots/.nanorc"
-# backup $default_file; sync; 
-# symlink $default_file $dank_file
+default_file = "~/.nanorc"
+dank_file = "~/.dank-dots/.nanorc"
+# backup $default_file
+symlink $default_file $dank_file
 
 # Symlink starship.toml (No default)
-# default_file = "~/.config/starship.toml"
-# dank_file = "~/.dank-dots/.config/starship.toml"
-# backup $default_file; sync; 
-# symlink $default_file $dank_file
+default_file = "~/.config/starship.toml"
+dank_file = "~/.dank-dots/.config/starship.toml"
+# backup $default_file
+symlink $default_file $dank_file
 
 # Symlink yazi/theme.toml and others
 
@@ -161,14 +165,17 @@ backup $default_file; sync; symlink $default_file $dank_file
 # Add TUFW to App launcher
 
 # symlink udiskie/config.yml (no default)
-# default_file = "~/.config/udiskie/config.yml"
-# dank_file = "~/.dank-dots/.config/udiskie/config.yml"
-# backup $default_file; sync; 
-# symlink $default_file $dank_file
+default_file = "~/.config/udiskie/config.yml"
+dank_file = "~/.dank-dots/.config/udiskie/config.yml"
+# backup $default_file
+symlink $default_file $dank_file
+
+
+
 
 # Copy over Wallpapers folder from .dank-dots
-# mkdir -p ~/Wallpapers
-#cp -rp ~/.dank-dots/Wallpapers/* ~/Wallpapers 
+mkdir -p ~/Wallpapers
+cp -rp ~/.dank-dots/Wallpapers/* ~/Wallpapers 
 
 
 
@@ -204,18 +211,18 @@ backup $default_file; sync; symlink $default_file $dank_file
 
 # ? Backup .bash_profile, then symlink from .dank-dots
 # Move file to be a .bak
-mv ~/.bash_profile ~/.bash_profile.bak
+# mv ~/.bash_profile ~/.bash_profile.bak
 # Symlink file from repo
-ln -s ~/.dank-dots/bash_profile ~/.bash_profile
+# ln -s ~/.dank-dots/bash_profile ~/.bash_profile
 
 
 
 # ?. Make Wallpapers folder in Home, then copy Wallpaper folder from .dank-dots 
 # Make the Wallpapers folder
-mkdir ~/Wallpapers
+# mkdir ~/Wallpapers
 # Copy over all of the files
-cp -rp ~/.dank-dots/Wallpapers/* ~/Wallpapers 
-
+# cp -rp ~/.dank-dots/Wallpapers/* ~/Wallpapers 
+# Do this better
 
 
 
