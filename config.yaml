@@ -1,0 +1,16 @@
+config:
+  backup: true
+  banner: true
+  create: true
+  dotpath: dotfiles
+  ignoreempty: false
+  keepdot: false
+  longkey: false
+  showdiff: false
+dotfiles:
+  f_settings.json:
+    src: config/DarkMaterialShell/settings.json
+    dst: ~/.config/DarkMaterialShell/settings.json
+  f_hyprland.conf:
+    src: config/hypr/hyprland.conf
+    dst: ~/.config/hypr/hyprland.conf
