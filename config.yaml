@@ -8,24 +8,50 @@ config:
   longkey: false
   showdiff: false
 dotfiles:
-  f_settings.json:
+  f_dms_default:
     src: config/DarkMaterialShell/settings.json
     dst: ~/.config/DarkMaterialShell/settings.json
-  f_hyprland.conf:
+  f_dms_defiant:
+    src: config/DarkMaterialShell/settings_defiant.json
+    dst: ~/.config/DarkMaterialShell/settings.json
+  f_dms_dauntless:
+    src: config/DarkMaterialShell/settings_dauntless.json
+    dst: ~/.config/DarkMaterialShell/settings.json
+  f_hyprland_default:
     src: config/hypr/hyprland.conf
     dst: ~/.config/hypr/hyprland.conf
-  f_btop.conf:
+  f_hyprland_default_monitors:
+    src: config/hypr/default_monitors.conf
+    dst: ~/.config/hypr/monitors.conf
+  f_hyprland_defiant_monitors:
+    src: config/hypr/defiant_monitors.conf
+    dst: ~/.config/hypr/monitors.conf
+  f_hyprland_dauntless_monitors:
+    src: config/hypr/dauntless_monitors.conf
+    dst: ~/.config/hypr/monitors.conf
+  f_btop:
     src: config/btop/btop.conf
     dst: ~/.config/btop/btop.conf
-  f_config.jsonc:
+  f_fastfetch:
     src: config/fastfetch/confg.jsonc
     dst: ~/.config/fastfetch/config.jsonc
-  f_config:
+  f_ghostty:
     src: config/ghostty/config
     dst: ~/.config/ghostty/config
-  f_config.yml:
+  f_udiskie:
     src: config/udiskie/config.yml
     dst: ~/.config/udiskie/config.yml
-  f_.nanorc:
+  f_nano:
     src: config/.nanorc
     dst: ~/.config/.nanorc
+profiles:
+  default:
+    dotfiles:
+    - f_dms_default
+    - f_hyprland_default
+    - f_hyprland_default_monitors
+    - f_btop
+    - f_fastfetch
+    - f_ghostty
+    - f_udiskie
+    - f_nano
