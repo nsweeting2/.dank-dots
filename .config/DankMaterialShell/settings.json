@@ -9,26 +9,26 @@
   "popupTransparency": 1,
   "dockTransparency": 1,
   "widgetBackgroundColor": "sch",
-  "cornerRadius": 12,
+  "cornerRadius": 5,
   "use24HourClock": false,
   "showSeconds": false,
   "useFahrenheit": true,
   "nightModeEnabled": false,
   "animationSpeed": 2,
   "customAnimationDuration": 500,
-  "wallpaperFillMode": "Stretch",
+  "wallpaperFillMode": "Fill",
   "blurredWallpaperLayer": false,
   "blurWallpaperOnOverview": false,
-  "showLauncherButton": true,
+  "showLauncherButton": false,
   "showWorkspaceSwitcher": true,
   "showFocusedWindow": true,
   "showWeather": true,
   "showMusic": true,
   "showClipboard": true,
-  "showCpuUsage": true,
-  "showMemUsage": true,
-  "showCpuTemp": true,
-  "showGpuTemp": true,
+  "showCpuUsage": false,
+  "showMemUsage": false,
+  "showCpuTemp": false,
+  "showGpuTemp": false,
   "selectedGpuIndex": 0,
   "enabledGpuPciIds": [],
   "showSystemTray": true,
@@ -67,11 +67,6 @@
     },
     {
       "id": "audioInput",
-      "enabled": true,
-      "width": 50
-    },
-    {
-      "id": "nightMode",
       "enabled": true,
       "width": 50
     },
@@ -235,16 +230,16 @@
   "updaterTerminalAdditionalParams": "",
   "screenPreferences": {
     "notifications": [
-      "DP-2"
+      "all"
     ],
     "toast": [
-      "DP-2"
+      "all"
     ],
     "systemTray": [
-      "DP-2"
+      "all"
     ],
     "notepad": [
-      "DP-2"
+      "all"
     ]
   },
   "showOnLastDisplay": {
