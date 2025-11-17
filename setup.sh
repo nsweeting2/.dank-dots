@@ -10,7 +10,7 @@
 
 # This script assumes the following is true: A minimal Arch install via archinstall script,
 # Dank Linux setup has been completed: curl -fsSL https://install.danklinux.com | sh
-# Dank Linux settings chosen: Hyprland and Ghostty
+# Dank Linux settings chosen: Hyprland and Kitty (Kitty because failback hyprland.conf uses it)
 # Dotdrop will use the default profile, switch profiles with 'COMMAND'
 
 ##### [ Configuration Check List ] ######################## [ Status ]
@@ -58,9 +58,10 @@ fi
 # Define all AUR packages to be installed via yay
 aur=(
     "btop"                        # A modern, interactive, and customizable resource monitor (like htop) that shows CPU, memory, and process usage in the terminal.
-    "chromium"                    # An open-source web browser project developed by Google that forms the basis for Google Chrome and Vivaldi.
+    "chromium"                    # Chromium is an open-source graphical web browser based on the Blink rendering engine.
     "dotdrop"                     # Save your dotfiles once, deploy them everywhere
     "fastfetch"                   # A high-speed and highly customizable system information fetching tool for the terminal (similar to Neofetch).
+    "ghostty"                     # Fast, native, feature-rich terminal emulator pushing modern features
     "nano"                        # A simple, easy-to-use, and lightweight text editor for the command-line interface.
     "tufw"                        # A Terminal User Interface (TUI) for **ufw** (Uncomplicated Firewall), providing an interactive way to manage firewall rules.
     "udiskie"                     # A **UDisks** front-end that automatically mounts and unmounts removable media (like USB drives) with optional notifications and a tray icon.
