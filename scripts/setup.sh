@@ -112,14 +112,15 @@ original_file="$HOME/.config/DankMaterialShell/settings.json"
 if [ -f "$original_file" ]; then
     # Create a timestamp in YYYYMMDD_HHMMSS format
     local timestamp=$(date +%Y%m%d_%H%M%S)
-    # Move the original file to a new name with the timestamp
-    mv "$1" "${1}_${timestamp}.bak"
+    
+    # CORRECT: Use $original_file for the mv command
+    mv "$original_file" "${original_file}_${timestamp}.bak"
 fi
 
 find $original_file -type l -delete
 
 dank_file="$HOME/.dank-dots/.config/DankMaterialShell/settings.json"
-if [ ! -f $dank_file ]; then
+if [ ! -f "$dank_file" ]; then
     # Create a symbolic link and force creation
     ln -snf $dank_file $original_file
 fi
