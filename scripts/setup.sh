@@ -51,7 +51,12 @@ echo 'if [[ $(tty) == /dev/tty1 ]]; then exec Hyprland; fi' >> ~/.bash_profile
 
 # File backup function, moves file to be an in place .bak
 function backup {
-    if [ -f $1 ]; then mv $1 "${1}.bak"; fi
+    if [ -f "$1" ]; then
+        # Create a timestamp in YYYYMMDD_HHMMSS format
+        local timestamp=$(date +%Y%m%d_%H%M%S)
+        # Move the original file to a new name with the timestamp
+        mv "$1" "${1}_${timestamp}.bak"
+    fi
 }
 
 # File symlink function, symlinks file to .dank-files
