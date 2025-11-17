@@ -15,8 +15,10 @@
 # I want to defeate this in the future but it is a long way out for now
 
 ##### [ Configuration Check List ] ######################## [ Status ]
+# Add hyprland to bash_profile for tty1 login                 [ Done ]
 # Install yay for all out AUR needs                           [ Done ]
-# Define all packages to be installed via yay                  [ LOL ]
+# List all packages to be installed via yay                    [ LOL ]
+# List all packages to be installed via pacman                 [ LOL ] 
 # Install all defined yay packages                            [ Done ]
 # Backup and symlink DankMaterialShell/settings.json              [  ]
 # Backup and symlink Hypr/hyprland.conf                           [  ]
@@ -30,10 +32,9 @@
 # Symlink starship.toml (No default)                              [  ]
 # Symlink yazi/theme.toml and others                              [  ]
 # Add yazi to app launcher                                        [  ]
-# Turn on UFW and add default rules
-# Add TUFW to App launcher
-# symlink udiskie/config.yml (no default)
-
+# Turn on UFW and add default rules                               [  ]
+# Add TUFW to App launcher                                        [  ]
+# symlink udiskie/config.yml (no default)                         [  ]
 # chromium
 # vivaldi
 # yazi
@@ -44,6 +45,9 @@
 
 # Exit the script if anything fails
 set -e
+
+# Add hyprland to bash_profile for tty1 login 
+echo 'if [[ $(tty) == /dev/tty1 ]]; then; exec Hyprland; fi' >> ~/.bash_profile
 
 # File backup function, moves file to be an in place .bak
 function backup {
