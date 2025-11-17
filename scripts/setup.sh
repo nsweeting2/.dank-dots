@@ -110,9 +110,9 @@ original_file="$HOME/.config/DankMaterialShell/settings.json"
 backup $original_file; sleep 10s; symlink $dank_file $original_file
 
 # Backup Hypr .conf files, then symlink from .dank-dots
-default_file="$HOME/.config/hypr/hyprland.conf"
 dank_file="$HOME/.dank-dots/.config/hypr/hyprland.conf"
-backup $default_file; sleep 10s; symlink $dank_file $original_file
+original_file="$HOME/.config/hypr/hyprland.conf"
+backup $original_file; sleep 10s; symlink $dank_file $original_file
 
 # Backup ghostty config, then symlink from .dank-dots
 # default_file = "~/.config/ghostty/config"
