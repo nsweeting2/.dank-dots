@@ -18,18 +18,18 @@
 # Install yay for all out AUR needs                           [ Done ]
 # Define all packages to be installed via yay                  [ LOL ]
 # Install all defined yay packages                            [ Done ]
-# Backup and symlink DankMaterialShell/settings.json          [ Done ]
-# Backup and symlink Hypr/hyprland.conf                                [ Done ]
-# Backup and symlink ghostty/config                                    [ Done ]
-# Backup and symlink btop/btop.conf                                    [ Done ]
-# Add btop to app launcher
-# Copy over btop/themes folder                                         [ Done ]
-# Symlink fastfetch/config.jsonc (No default)                          [ File is out of date ]
-# Add fastfetch to app launcher
-# Symlink .nanorc config (No default)                              [ Done ]
-# Symlink starship.toml (No default)                               [ Done ]
-# Symlink yazi/theme.toml and others
-# Add yazi to app launcher
+# Backup and symlink DankMaterialShell/settings.json              [  ]
+# Backup and symlink Hypr/hyprland.conf                           [  ]
+# Backup and symlink ghostty/config                               [  ]
+# Backup and symlink btop/btop.conf                               [  ]
+# Add btop to app launcher                                        [  ]
+# Copy over btop/themes folder                                    [  ]
+# Symlink fastfetch/config.jsonc (No default)                     [  ]
+# Add fastfetch to app launcher                                   [  ]
+# Symlink .nanorc config (No default)                             [  ]
+# Symlink starship.toml (No default)                              [  ]
+# Symlink yazi/theme.toml and others                              [  ]
+# Add yazi to app launcher                                        [  ]
 # Turn on UFW and add default rules
 # Add TUFW to App launcher
 # symlink udiskie/config.yml (no default)
@@ -55,12 +55,15 @@ function symlink {
     if [ ! -f $1 ]; then ln -s $1 $2; fi
 }
 
-# Clone yay Repo
-git clone https://aur.archlinux.org/yay.git
+# The overall line succeeds, and set -e is not triggered.
+which yay || true
 
-# Run makepkg form yay repo
-cd yay && makepkg --noconfirm -si ; cd ..
-
+# Now you can check the result of 'which yay' in the next line if needed
+if ! which yay > /dev/null 2>&1; then
+    # Clone yay Repo
+    git clone https://aur.archlinux.org/yay.git
+    # Run makepkg form yay repo
+    cd yay && makepkg --noconfirm -si ; cd ..
 fi
 
 # Define all packages to be installed via yay
