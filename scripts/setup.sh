@@ -18,7 +18,7 @@
 # Add hyprland to bash_profile for tty1 login                 [ Done ]
 # Install yay for all out AUR needs                           [ Done ]
 # List all packages to be installed via yay                    [ LOL ]
-# List all packages to be installed via pacman                 [ LOL ] 
+# List all packages to be installed via pacman                 [ LOL ]
 # Install all defined yay packages                            [ Done ]
 # Backup and symlink DankMaterialShell/settings.json              [  ]
 # Backup and symlink Hypr/hyprland.conf                           [  ]
@@ -100,10 +100,9 @@ packages=(
 yay -S --noconfirm "${packages[@]}"
 
 # Backup DankMaterialShell settings.json, then symlink from .dank-dots
-# default_file = "~/.config/DankMaterialShell/settings.json"
-# dank_file = "~/.dank-dots/.config/DankMaterialShell/settings.json"
-# backup $default_file
-# symlink $default_file $dank_file
+default_file = "~/.config/DankMaterialShell/settings.json"
+dank_file = "~/.dank-dots/.config/DankMaterialShell/settings.json"
+backup $default_file; sync; symlink $default_file $dank_file
 
 # Backup Hypr .conf files, then symlink from .dank-dots
 # default_file = "~/.config/hypr/hyprland.conf"
