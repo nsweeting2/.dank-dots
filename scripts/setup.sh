@@ -107,12 +107,12 @@ yay -S --noconfirm "${packages[@]}"
 # Backup DankMaterialShell settings.json, then symlink from .dank-dots
 default_file="$HOME/.config/DankMaterialShell/settings.json"
 dank_file="$HOME/.dank-dots/.config/DankMaterialShell/settings.json"
-backup $default_file; sync; symlink $default_file $dank_file
+backup $default_file; wait 10; symlink $default_file $dank_file
 
 # Backup Hypr .conf files, then symlink from .dank-dots
 default_file="$HOME/.config/hypr/hyprland.conf"
 dank_file="$HOME/.dank-dots/.config/hypr/hyprland.conf"
-backup $default_file; sync; symlink $default_file $dank_file
+backup $default_file; wait 10; symlink $default_file $dank_file
 
 # Backup ghostty config, then symlink from .dank-dots
 # default_file = "~/.config/ghostty/config"
