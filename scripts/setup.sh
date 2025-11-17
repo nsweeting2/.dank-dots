@@ -120,10 +120,10 @@ fi
 find $original_file -type l -delete
 
 dank_file="$HOME/.dank-dots/.config/DankMaterialShell/settings.json"
-if [ ! -f "$dank_file" ]; then
+#if [ ! -f "$dank_file" ]; then
     # Create a symbolic link and force creation
     ln -snf $dank_file $original_file
-fi
+#fi
 
 # Backup Hypr .conf files, then symlink from .dank-dots
 # dank_file="$HOME/.dank-dots/.config/hypr/hyprland.conf"
