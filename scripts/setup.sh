@@ -70,33 +70,24 @@ fi
 packages=(
     "7zip"                        # A file archiver with a high compression ratio that supports many formats (7z, XZ, ZIP, RAR, etc.).
     "btop"                        # A modern, interactive, and customizable resource monitor (like htop) that shows CPU, memory, and process usage in the terminal.
+    "brave-bin"                   # Web browser that blocks ads and trackers by default (binary release)
     "chromium"                    # An open-source web browser project developed by Google that forms the basis for Google Chrome and Vivaldi.
     "fastfetch"                   # A high-speed and highly customizable system information fetching tool for the terminal (similar to Neofetch).
     "figlet"                      # A command-line program that creates large, stylized ASCII text banners out of ordinary text.
     "fzf"                         # A general-purpose command-line fuzzy finder, used to interactively search and filter lists (files, history, etc.).
     "nano"                        # A simple, easy-to-use, and lightweight text editor for the command-line interface.
     "nwg-look"                    # A GTK-based utility for configuring GTK themes, icons, fonts, and cursors, particularly useful in Wayland environments.
-    "pinta"                       # A free, open-source program for drawing and basic image editing (similar to Paint.NET), supporting layers and effects.
     "qt5ct"                       # A utility to configure Qt5 settings (style, fonts, icons) under non-KDE desktop environments.
     "qt6ct"                       # A utility to configure Qt6 settings (style, fonts, icons) under non-KDE desktop environments.
     "rsync"                       # A utility for efficiently transferring and synchronizing files to and from remote computers or local directories.
     "starship-git"                # A minimal, fast, and customizable prompt for any shell, providing context-aware information (e.g., Git status, language versions).
     "tar"                         # The standard utility for creating and manipulating "tape archive" files, commonly used to bundle files into a single archive (a "tarball").
-    "ttf-fira-code"               # The Fira Code font family, which includes programming ligatures (combining characters like `->` into a single symbol).
-    "ttf-fira-mono"               # The monospaced variant of the Fira font family, designed for code and command-line interfaces.
-    "ttf-fira-sans"               # The humanist sans-serif variant of the Fira font family, designed for general text and web use.
-    "ttf-firacode-nerd"           # The Nerd Fonts patched version of Fira Code, adding thousands of icons (Glyphs) for powerline and development use.
-    "ttf-nerd-fonts-symbols"      # A package providing thousands of symbols/icons merged into popular programming fonts for terminal use.
-    "ttf-nerd-fonts-symbols-mono" # The monospaced symbol fonts, ensuring consistent spacing in the terminal.
     "tufw"                        # A Terminal User Interface (TUI) for **ufw** (Uncomplicated Firewall), providing an interactive way to manage firewall rules.
     "udiskie"                     # A **UDisks** front-end that automatically mounts and unmounts removable media (like USB drives) with optional notifications and a tray icon.
     "ufw"                         # The **Uncomplicated Firewall**, a program for managing the Netfilter firewall, designed to be easy to use.
-    "vlc"                         # A free and open-source, cross-platform media player and streaming media server that plays most multimedia files.
-    "vivaldi"                     # A freeware web browser developed by Vivaldi Technologies, known for its high level of customization and feature set.
     "vscodium-bin"                # The pre-compiled binary version of VSCodium, a community-driven, telemetry-free distribution of VS Code.
     "wev"                         # A debugging utility for Wayland that creates a window and prints all the Wayland events it receives (analogous to X11's `xev`).
     "wget"                        # A free utility for non-interactive downloading of files from the web, supporting HTTP, HTTPS, and FTP protocols.
-    "wisdom-tree"                 # (Uncommon) Likely an AUR package for a specific terminal utility or a component related to a larger configuration; the name suggests a directory/file tree view or analysis tool.
     "yazi"                        # A modern, blazing-fast terminal file manager written in Rust, featuring asynchronous I/O and image previews.
     "zoxide"                      # A smart `cd` command written in Rust that learns your most used directories and allows you to jump to them quickly.
 )
