@@ -36,7 +36,7 @@
 # Add TUFW to App launcher                                        [  ]
 # symlink udiskie/config.yml (no default)                         [  ]
 # chromium
-# vivaldi
+# brave
 # yazi
 # zoxide
 # ?. Copy over Wallpapers folder
@@ -47,7 +47,7 @@
 set -e
 
 # Add hyprland to bash_profile for tty1 login 
-echo 'if [[ $(tty) == /dev/tty1 ]]; then; exec Hyprland; fi' >> ~/.bash_profile
+echo 'if [[ $(tty) == /dev/tty1 ]]; then exec Hyprland; fi' >> ~/.bash_profile
 
 # File backup function, moves file to be an in place .bak
 function backup {
@@ -95,7 +95,6 @@ packages=(
     "yazi"                        # A modern, blazing-fast terminal file manager written in Rust, featuring asynchronous I/O and image previews.
     "zoxide"                      # A smart `cd` command written in Rust that learns your most used directories and allows you to jump to them quickly.
 )
-
 
 # Install all defined YAY packages
 yay -S --noconfirm "${packages[@]}"
