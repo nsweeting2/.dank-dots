@@ -74,7 +74,7 @@ pacman=()
 yay -S --noconfirm "${aur[@]}"
 
 # Use Dotdrop to install the dotfiles 
-dotdrop install
+dotdrop install -af
 
 # Copy over Wallpapers folder
 mkdir -p ~/Wallpapers
