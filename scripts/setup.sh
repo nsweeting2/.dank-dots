@@ -22,6 +22,7 @@
 # Install all defined yay packages                            [ Done ]
 # Backup and symlink DankMaterialShell/settings.json              [  ]
 # Backup and symlink Hypr/hyprland.conf                           [  ]
+
 # Backup and symlink ghostty/config                               [  ]
 # Backup and symlink btop/btop.conf                               [  ]
 # Add btop to app launcher                                        [  ]
@@ -48,21 +49,6 @@ set -e
 
 # Add hyprland to bash_profile for tty1 login 
 echo 'if [[ $(tty) == /dev/tty1 ]]; then exec Hyprland; fi' >> ~/.bash_profile
-
-# File backup function, moves file to be an in place .bak
-function backup {
-    if [ -f "$1" ]; then
-        # Create a timestamp in YYYYMMDD_HHMMSS format
-        local timestamp=$(date +%Y%m%d_%H%M%S)
-        # Move the original file to a new name with the timestamp
-        mv "$1" "${1}_${timestamp}.bak"
-    fi
-}
-
-# File symlink function, symlinks file to .dank-files
-function symlink {
-    if [ ! -f $1 ]; then ln -snf $1 $2; fi
-}
 
 # The overall line succeeds, and set -e is not triggered.
 which yay || true
@@ -104,12 +90,39 @@ packages=(
 # Install all defined YAY packages
 yay -S --noconfirm "${packages[@]}"
 
+
+# File backup function, moves file to be an in place .bak
+function backup {
+    if [ -f "$1" ]; then
+        echo "File: ${1} exists, backing up as ${1}_${timestamp}.bak"
+        # Create a timestamp in YYYYMMDD_HHMMSS format
+        local timestamp=$(date +%Y%m%d_%H%M%S)
+        # Move the original file to a new name with the timestamp
+        mv "$1" "${1}_${timestamp}.bak"
+    fi
+}
+
+# File symlink function, symlinks file to .dank-files
+function symlink {
+    if [ ! -f $1 ]; then ln -snf $1 $2; fi
+}
+
 # Backup DankMaterialShell settings.json, then symlink from .dank-dots
-dank_file="$HOME/.dank-dots/.config/DankMaterialShell/settings.json"
 original_file="$HOME/.config/DankMaterialShell/settings.json"
-backup $original_file
+if [ -f "$original_file" ]; then
+    # Create a timestamp in YYYYMMDD_HHMMSS format
+    local timestamp=$(date +%Y%m%d_%H%M%S)
+    # Move the original file to a new name with the timestamp
+    mv "$1" "${1}_${timestamp}.bak"
+fi
+
 find $original_file -type l -delete
-symlink $dank_file $original_file
+
+dank_file="$HOME/.dank-dots/.config/DankMaterialShell/settings.json"
+if [ ! -f dank_file ]; then
+    # Create a symbolic link and force creation
+    ln -snf $dank_file $original_file
+fi
 
 # Backup Hypr .conf files, then symlink from .dank-dots
 # dank_file="$HOME/.dank-dots/.config/hypr/hyprland.conf"
