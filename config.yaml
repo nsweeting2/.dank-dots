@@ -58,7 +58,7 @@ profiles:
   defiant:
     dotfiles:
     - f_dms_default
-    - f_hyprland_defiant
+    - f_hyprland_default
     - f_hyprland_defiant_monitors
     - f_btop
     - f_fastfetch
