@@ -29,11 +29,14 @@ dotfiles:
   f_hyprland_dauntless_monitors:
     src: config/hypr/dauntless_monitors.conf
     dst: ~/.config/hypr/monitors.conf
+  f_hyprland_titan_monitors:
+    src: config/hypr/titan_monitors.conf
+    dst: ~/.config/hypr/monitors.conf
   f_btop:
     src: config/btop/btop.conf
     dst: ~/.config/btop/btop.conf
   f_fastfetch:
-    src: config/fastfetch/confg.jsonc
+    src: config/fastfetch/config.jsonc
     dst: ~/.config/fastfetch/config.jsonc
   f_ghostty:
     src: config/ghostty/config
