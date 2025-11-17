@@ -52,7 +52,7 @@ function backup {
 
 # File symlink function, symlinks file to .dank-files
 function symlink {
-    if [ ! -f $1 ]; then ln -s $1 $2
+    if [ ! -f $1 ]; then ln -s $1 $2; fi
 }
 
 # Clone yay Repo
