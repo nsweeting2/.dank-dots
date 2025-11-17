@@ -75,3 +75,13 @@ profiles:
     - f_ghostty
     - f_udiskie
     - f_nano
+  titan:
+    dotfiles:
+    - f_dms_default
+    - f_hyprland_default
+    - f_hyprland_titan_monitors
+    - f_btop
+    - f_fastfetch
+    - f_ghostty
+    - f_udiskie
+    - f_nano
