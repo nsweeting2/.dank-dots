@@ -16,35 +16,29 @@
 # Install yay for all out AUR needs                           [ Done ]
 # List all packages to be installed via yay                    [ LOL ]
 # List all packages to be installed via pacman                 [ LOL ]
-# Install all defined yay packages                            [ Done ]
-# Backup and symlink DankMaterialShell/settings.json              [  ]
-# Backup and symlink Hypr/hyprland.conf                           [  ]
-# Backup and symlink ghostty/config                               [  ]
-# Backup and symlink btop/btop.conf                               [  ]
+# Install all defined AUR packages                            [ Done ]
+# Install all defined pacman packages                         [ Done ]
+# Dotdrop will link all the dotfiles on reboot                [ Done ]
+# Copy over Wallpapers folder                                 [ Done ]
+######################################################################
+##### [ Dotdrop Check List ] ############################## [ Status ]
+# DarkMateruialShell config                                 [  ]
+# Hyprland Config                                           [  ]
+# btop                                                      [  ]
+# fastfetch                                                 [  ]
+# ghostty                                                   [  ]
+# nano                                                      [  ]
+# udiskie                                                   [  ]
+# starship                                                  [  ]
+# yazi                                                      [  ]
+# ufw                                                       [  ] 
 
-
-
-
-
-
-# Add btop to app launcher                                        [  ]
-# Copy over btop/themes folder                                    [  ]
-# Symlink fastfetch/config.jsonc (No default)                     [  ]
+######################################################################
+##### [ App Launcher Check List ] ######################### [ Status ]
+# btop                                       [  ]
 # Add fastfetch to app launcher                                   [  ]
-# Symlink .nanorc config (No default)                             [  ]
-# Symlink starship.toml (No default)                              [  ]
-# Symlink yazi/theme.toml and others                              [  ]
 # Add yazi to app launcher                                        [  ]
-# Turn on UFW and add default rules                               [  ]
 # Add TUFW to App launcher                                        [  ]
-# symlink udiskie/config.yml (no default)                         [  ]
-# chromium
-# brave
-# yazi
-# zoxide
-# ?. Copy over Wallpapers folder
-# Symlink the generic wallpaper
-# Copy over bashrc and bashprofile
 
 # Exit the script if anything fails
 set -e
@@ -89,140 +83,14 @@ pacman=()
 # Install all defined AUR packages
 yay -S --noconfirm "${aur[@]}"
 
-# Dotdrop is going to handle the dotfiles...
+# Install all defined pacman packages
+# NONE YET
 
+# Dotdrop will link all the dotfiles on reboot
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# File backup function, moves file to be an in place .bak
-# function backup {
-    # if [ -f "$1" ]; then
-        # echo "File: ${1} exists, backing up as ${1}_${timestamp}.bak"
-        # Create a timestamp in YYYYMMDD_HHMMSS format
-        # local timestamp=$(date +%Y%m%d_%H%M%S)
-        # Move the original file to a new name with the timestamp
-        ## mv "$1" "${1}_${timestamp}.bak"
-    # fi
-# }
-
-# File symlink function, symlinks file to .dank-files
-#function symlink {
-    #  if [ ! -f $1 ]; then ln -snf $1 $2; fi
-# } 
-
-# Backup DankMaterialShell settings.json, then symlink from .dank-dots
-# original_file="$HOME/.config/DankMaterialShell/settings.json"
-# if [ -f "$original_file" ]; then
-    # Create a timestamp in YYYYMMDD_HHMMSS format
-    # local timestamp=$(date +%Y%m%d_%H%M%S)
-    
-    # CORRECT: Use $original_file for the mv command
-    # mv "$original_file" "${original_file}_${timestamp}.bak"
-# fi
-
-# find $original_file -type l -delete
-
-# dank_file="$HOME/.dank-dots/.config/DankMaterialShell/settings.json"
-# if [ ! -f "$dank_file" ]; then
-    # Create a symbolic link and force creation
-    # ln -snf $dank_file $original_file
-# fi
-
-# Backup Hypr .conf files, then symlink from .dank-dots
-# dank_file="$HOME/.dank-dots/.config/hypr/hyprland.conf"
-# original_file="$HOME/.config/hypr/hyprland.conf"
-# backup $original_file; sleep 10s; symlink $dank_file $original_file
-
-# Backup ghostty config, then symlink from .dank-dots
-# default_file = "~/.config/ghostty/config"
-# dank_file = "~/.dank-dots/.config/ghostty/config"
-# backup $default_file
-# symlink $default_file $dank_file
-
-# Backup btop config, then symlink from .dank-dots
-# default_file = "~/.config/btop/btop.conf"
-# dank_file = "~/.dank-dots/.config/btop/btop.conf"
-# backup $default_file
-# symlink $default_file $dank_file
-
-# Symlink btop.desktop for app launcher
-# dank_file="$HOME/.dank-dots/applications/btop.desktop"
-# destination_file="$HOME/.local/share/applications/btop.desktop"
-# backup $default_file
-# symlink $dank_file $destination_file
-
-# Copy over btop/themes folder from .dank-dots
-# mkdir -p ~/.config/btop/themes
-# cp -rp ~/.dank-dots/btop/themes/* ~/.config/btop/themes
-
-# Symlink fastfetch config from .dank-dots (No default config)
-# default_file = "~/.config/fastfetch/config.jsonc"
-# dank_file = "~/.dank-dots/.config/fastfetch/config.jsonc"
-# backup $default_file
-# symlink $default_file $dank_file
-
-# Add fastfetch to app launcher
-
-# Symlink nano config from .dank-dots (No default config)
-# default_file = "~/.nanorc"
-# dank_file = "~/.dank-dots/.nanorc"
-# backup $default_file
-# symlink $default_file $dank_file
-
-# Symlink starship.toml (No default)
-# efault_file = "~/.config/starship.toml"
-# dank_file = "~/.dank-dots/.config/starship.toml"
-# backup $default_file
-# symlink $default_file $dank_file
-
-# Symlink yazi/theme.toml and others
-
-# Add yazi to app launcher
-
-# Turn on UFW and add default rules
-
-# Add TUFW to App launcher
-
-# symlink udiskie/config.yml (no default)
-# default_file = "~/.config/udiskie/config.yml"
-# dank_file = "~/.dank-dots/.config/udiskie/config.yml"
-# backup $default_file
-# symlink $default_file $dank_file
-
-# Copy over Wallpapers folder from .dank-dots
-# mkdir -p ~/Wallpapers
-# cp -rp ~/.dank-dots/Wallpapers/* ~/Wallpapers 
+# Copy over Wallpapers folder
+mkdir -p ~/Wallpapers
+cp -rp ~/.dank-dots/Wallpapers/* ~/Wallpapers 
 
 
 

@@ -14,3 +14,18 @@ dotfiles:
   f_hyprland.conf:
     src: config/hypr/hyprland.conf
     dst: ~/.config/hypr/hyprland.conf
+  f_btop.conf:
+    src: config/btop/btop.conf
+    dst: ~/.config/btop/btop.conf
+  f_config.jsonc:
+    src: config/fastfetch/confg.jsonc
+    dst: ~/.config/fastfetch/config.jsonc
+  f_config:
+    src: config/ghostty/config
+    dst: ~/.config/ghostty/config
+  f_config.yml:
+    src: config/udiskie/config.yml
+    dst: ~/.config/udiskie/config.yml
+  f_.nanorc:
+    src: config/.nanorc
+    dst: ~/.config/.nanorc
