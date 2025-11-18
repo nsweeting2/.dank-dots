@@ -1,9 +1,8 @@
 [Desktop Entry]
 Version=1.0
 Type=Application
+Terminal=true
+Exec=nano
 Name=Nano Text Editor
 Comment=Simple command-line text editor
-Exec=nano
-Icon=text-editor
-Terminal=true
-Categories=Utility;TextEditor;ConsoleOnly;
+Categories=TextEditor

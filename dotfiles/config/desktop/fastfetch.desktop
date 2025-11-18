@@ -1,6 +1,8 @@
 [Desktop Entry]
 Version=1.0
 Type=Application
-Exec=ghostty -e /bin/sh -c "fastfetch; read -n 1 -s -r -p 'Press any key to close...'"
+Terminal=true
+Exec=ghostty -e fastfetch
 Name=Fastfetch
-Comment=System About, TUI
+Comment=[TUI] About system page
+Categories=Utility

@@ -1,9 +1,8 @@
 [Desktop Entry]
 Version=1.0
 Type=Application
-Name=Outlook Web App
-Comment=Outlook Web App (Chromium)
-Exec=chromium --app=https://outlook.office.com/mail/
 Terminal=false
-Categories=Network;
-StartupWMClass=https://outlook.office.com/mail/
+Name=Outlook Web App
+Comment=[WebApp] Outlook Web App
+Exec=chromium --app=https://outlook.office.com/mail/
+Categories=Network
