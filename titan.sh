@@ -1,1 +1,8 @@
-# write a script that does all the extra stuff for titan.
+multimc-bin
+# Steam
+# Lutris
+heroic-games-launcher-bin
+
+# Docker
+# Docker-Compose
+# Lazydocker

@@ -2,4 +2,5 @@
 Version=1.0
 Type=Application
 Exec=ghostty -e btop
-Name=btop
+Name=BTOP++
+Comment=System Resource Monitor, TUI

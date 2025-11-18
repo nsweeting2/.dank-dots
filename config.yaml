@@ -47,6 +47,30 @@ dotfiles:
   f_nano:
     src: config/.nanorc
     dst: ~/.config/.nanorc
+  f_btop.desktop:
+    src: config/desktop/btop.desktop
+    dst: ~/.local/share/desktop/btop.desktop
+  f_fastfetch.desktop:
+    src: config/desktop/fastfetch.desktop
+    dst: ~/.local/share/desktop/fastfetch.desktop
+  f_yazi.desktop:
+    src: config/desktop/yazi.desktop
+    dst: ~/.local/share/desktop/yazi.desktop
+  f_nano.desktop:
+    src: config/desktop/nano.desktop
+    dst: ~/.local/share/desktop/nano.desktop
+  f_tufw.desktop:
+    src: config/desktop/tufw.desktop
+    dst: ~/.local/share/desktop/tufw.desktop
+  f_gmail.desktop:
+    src: config/desktop/gmail.desktop
+    dst: ~/.local/share/desktop/gmail.desktop
+  f_owa.desktop:
+    src: config/desktop/owa.desktop
+    dst: ~/.local/share/desktop/owa.desktop
+  f_teams.desktop:
+    src: config/desktop/teams.desktop
+    dst: ~/.local/share/desktop/teams.desktop
 profiles:
   default:
     dotfiles:
@@ -68,6 +92,15 @@ profiles:
     - f_ghostty
     - f_udiskie
     - f_nano
+    - f_btop.desktop
+    - f_fastfetch.desktop
+    - f_yazi.desktop
+    - f_nano.desktop
+    - f_tufw.desktop
+    - f_gmail.desktop
+    - f_owa.desktop
+    - f_teams.desktop
+
   dauntless:
     dotfiles:
     - f_dms_default

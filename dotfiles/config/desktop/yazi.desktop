@@ -1,0 +1,6 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Exec=ghostty -e yazi
+Name=Yazi
+Comment=File Manager, TUI

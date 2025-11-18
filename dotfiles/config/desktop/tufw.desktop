@@ -1,0 +1,6 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Exec=sudo ghostty -e tufw
+Name=TUFW
+Comment=Uncomplicated Firewall, TUI
