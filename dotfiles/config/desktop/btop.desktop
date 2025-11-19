@@ -1,7 +1,7 @@
 [Desktop Entry]
 Version=1.0
 Type=Application
-Terminal=true
+Terminal=false
 Exec=ghostty -e btop
 Name=BTOP++
 Comment=[TUI] System Resource Monitor

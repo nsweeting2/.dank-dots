@@ -43,6 +43,8 @@ aur=(
     "starship"
     "openssh"
     "fail2ban"
+    "fwupd"
+    "sshs"
 
     # --- Input Drivers ---
     "xf86-input-synaptics"

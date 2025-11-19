@@ -9,14 +9,14 @@ config:
   showdiff: false
 dotfiles:
   f_dms_default:
-    src: config/DarkMaterialShell/settings.json
-    dst: ~/.config/DarkMaterialShell/settings.json
+    src: config/DankMaterialShell/settings.json
+    dst: ~/.config/DankMaterialShell/settings.json
   f_dms_defiant:
-    src: config/DarkMaterialShell/settings_defiant.json
-    dst: ~/.config/DarkMaterialShell/settings.json
+    src: config/DankMaterialShell/settings_defiant.json
+    dst: ~/.config/DankMaterialShell/settings.json
   f_dms_dauntless:
-    src: config/DarkMaterialShell/settings_dauntless.json
-    dst: ~/.config/DarkMaterialShell/settings.json
+    src: config/DankMaterialShell/settings_dauntless.json
+    dst: ~/.config/DankMaterialShell/settings.json
   f_hyprland_default:
     src: config/hypr/hyprland.conf
     dst: ~/.config/hypr/hyprland.conf
