@@ -5,17 +5,22 @@
 # !/bin/sh
 
 # Author: nsweeting2
-# This script is meant to be run on a fresh setup but I have endevored to make it idempotent.
-# This is a miniaml setup script, use other scripts for additional packages and configurations.
+# This script is meant to be run on a fresh installs but I have attempted to make it idempotent.
 
 # This script assumes the following is true: A minimal Arch install via archinstall script,
+# I am currently testing with CatchyOS - Hyprland setup
 # Dank Linux setup has been completed: curl -fsSL https://install.danklinux.com | sh
 # Dank Linux settings chosen: Hyprland and Kitty (Kitty because failback hyprland.conf uses it)
 # Dotdrop will use the default profile, switch profiles with 'COMMAND'
 
+##### [ Prerequisites ] ########################################## [ ]
+# ArchLinux                                                        [ ]
+# CatchyOS                                                         [ ]
+# DankLinux Suite                                                  [ ]
+######################################################################
 ##### [ Configuration Check List ] ######################## [ Status ]
-# Run pacman -Syu for updates                                 [  ]
-# Add hyprland to bash_profile for tty1 login                 [ Done ]
+# Run pacman -Syu for updates                                 [ Done ]
+# Add hyprland to bash_profile for tty1 logins                [ Done ]
 # Install yay for all out AUR needs                           [ Done ]
 # List all packages to be installed via yay                   [ Done ]
 # Install all defined AUR packages                            [ Done ]
@@ -46,11 +51,11 @@ set -e
 # Run pacman -Syu for updates
 sudo pacman -Syu
 
-# Add hyprland to bash_profile for tty1 login
+# Add hyprland to bash_profile for tty1 logins
 echo 'if [[ $(tty) == /dev/tty1 ]]; then exec Hyprland; fi' >> ~/.bash_profile
 
-# The overall line succeeds, and set -e is not triggered.
-which yay || true
+# Install yay for all out AUR needs
+which yay || true # The overall line succeeds, and set -e is not triggered.
 
 # Now you can check the result of 'which yay' in the next line if needed
 if ! which yay > /dev/null 2>&1; then
@@ -61,7 +66,7 @@ if ! which yay > /dev/null 2>&1; then
 fi
 
 # Define all AUR packages to be installed via yay
-aur=( "btop" "chromium" "dotdrop" "fastfetch" "ghostty" "nano" "tufw" "udiskie" "ufw" "yazi" )
+aur=("chromium" "dotdrop" "fastfetch" "ghostty" "nano" "tufw" "udiskie" "ufw" "yazi" )
 
 # Install all defined AUR packages
 yay -S --noconfirm "${aur[@]}"

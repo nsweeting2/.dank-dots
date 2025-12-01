@@ -100,22 +100,11 @@ profiles:
     - f_gmail.desktop
     - f_owa.desktop
     - f_teams.desktop
-
-  dauntless:
+  equinox:
     dotfiles:
     - f_dms_default
     - f_hyprland_default
-    - f_hyprland_dauntless_monitors
-    - f_btop
-    - f_fastfetch
-    - f_ghostty
-    - f_udiskie
-    - f_nano
-  titan:
-    dotfiles:
-    - f_dms_default
-    - f_hyprland_default
-    - f_hyprland_titan_monitors
+    - f_hyprland_default_monitors
     - f_btop
     - f_fastfetch
     - f_ghostty
