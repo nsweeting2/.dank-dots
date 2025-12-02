@@ -1,8 +1,0 @@
-[Desktop Entry]
-Version=1.0
-Type=Application
-Terminal=false
-Name=Microsoft Teams
-Comment=[WebApp] Microsoft Teams
-Exec=chromium --app=https://teams.microsoft.com
-Categories=Network

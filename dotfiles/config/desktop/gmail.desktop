@@ -1,8 +1,0 @@
-[Desktop Entry]
-Version=1.0
-Type=Application
-Terminal=false
-Exec=chromium --app=https://mail.google.com/mail
-Name=Gmail
-Comment=[WebApp} Gmail WebApp
-Categories=Network

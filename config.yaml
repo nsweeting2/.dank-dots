@@ -26,87 +26,27 @@ dotfiles:
   f_hyprland_defiant_monitors:
     src: config/hypr/defiant_monitors.conf
     dst: ~/.config/hypr/monitors.conf
-  f_hyprland_dauntless_monitors:
-    src: config/hypr/dauntless_monitors.conf
+  f_hyprland_equinox_monitors:
+    src: config/hypr/defiant_monitors.conf
     dst: ~/.config/hypr/monitors.conf
-  f_hyprland_titan_monitors:
-    src: config/hypr/titan_monitors.conf
-    dst: ~/.config/hypr/monitors.conf
-  f_btop:
-    src: config/btop/btop.conf
-    dst: ~/.config/btop/btop.conf
-  f_fastfetch:
-    src: config/fastfetch/config.jsonc
-    dst: ~/.config/fastfetch/config.jsonc
-  f_ghostty:
-    src: config/ghostty/config
-    dst: ~/.config/ghostty/config
-  f_udiskie:
-    src: config/udiskie/config.yml
-    dst: ~/.config/udiskie/config.yml
-  f_nano:
-    src: config/.nanorc
-    dst: ~/.config/.nanorc
-  f_btop.desktop:
-    src: config/desktop/btop.desktop
-    dst: ~/.local/share/desktop/btop.desktop
-  f_fastfetch.desktop:
-    src: config/desktop/fastfetch.desktop
-    dst: ~/.local/share/desktop/fastfetch.desktop
-  f_yazi.desktop:
-    src: config/desktop/yazi.desktop
-    dst: ~/.local/share/desktop/yazi.desktop
-  f_nano.desktop:
-    src: config/desktop/nano.desktop
-    dst: ~/.local/share/desktop/nano.desktop
-  f_tufw.desktop:
-    src: config/desktop/tufw.desktop
-    dst: ~/.local/share/desktop/tufw.desktop
-  f_gmail.desktop:
-    src: config/desktop/gmail.desktop
-    dst: ~/.local/share/desktop/gmail.desktop
-  f_owa.desktop:
-    src: config/desktop/owa.desktop
-    dst: ~/.local/share/desktop/owa.desktop
-  f_teams.desktop:
-    src: config/desktop/teams.desktop
-    dst: ~/.local/share/desktop/teams.desktop
 profiles:
   default:
     dotfiles:
     - f_dms_default
     - f_hyprland_default
     - f_hyprland_default_monitors
-    - f_btop
-    - f_fastfetch
-    - f_ghostty
-    - f_udiskie
-    - f_nano
   defiant:
     dotfiles:
     - f_dms_default
     - f_hyprland_default
     - f_hyprland_defiant_monitors
-    - f_btop
-    - f_fastfetch
-    - f_ghostty
-    - f_udiskie
-    - f_nano
-    - f_btop.desktop
-    - f_fastfetch.desktop
-    - f_yazi.desktop
-    - f_nano.desktop
-    - f_tufw.desktop
-    - f_gmail.desktop
-    - f_owa.desktop
-    - f_teams.desktop
   equinox:
     dotfiles:
     - f_dms_default
     - f_hyprland_default
+    - f_hyprland_equinox_monitors
+  titan:
+    dotfiles:
+    - f_dms_default
+    - f_hyprland_default
     - f_hyprland_default_monitors
-    - f_btop
-    - f_fastfetch
-    - f_ghostty
-    - f_udiskie
-    - f_nano

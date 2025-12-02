@@ -1,8 +1,0 @@
-[Desktop Entry]
-Version=1.0
-Type=Application
-Terminal=false
-Name=Outlook Web App
-Comment=[WebApp] Outlook Web App
-Exec=chromium --app=https://outlook.office.com/mail/
-Categories=Network

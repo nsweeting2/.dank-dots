@@ -1,8 +1,0 @@
-[Desktop Entry]
-Version=1.0
-Type=Application
-Terminal=true
-Exec=ghostty -e fastfetch
-Name=Fastfetch
-Comment=[TUI] About system page
-Categories=Utility
