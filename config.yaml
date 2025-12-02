@@ -11,12 +11,6 @@ dotfiles:
   f_dms_default:
     src: config/DankMaterialShell/settings.json
     dst: ~/.config/DankMaterialShell/settings.json
-  f_dms_defiant:
-    src: config/DankMaterialShell/settings_defiant.json
-    dst: ~/.config/DankMaterialShell/settings.json
-  f_dms_dauntless:
-    src: config/DankMaterialShell/settings_dauntless.json
-    dst: ~/.config/DankMaterialShell/settings.json
   f_hyprland_default:
     src: config/hypr/hyprland.conf
     dst: ~/.config/hypr/hyprland.conf

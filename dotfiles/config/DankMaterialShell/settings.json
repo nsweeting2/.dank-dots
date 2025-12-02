@@ -9,26 +9,26 @@
   "popupTransparency": 1,
   "dockTransparency": 1,
   "widgetBackgroundColor": "sch",
-  "cornerRadius": 5,
+  "cornerRadius": 12,
   "use24HourClock": false,
   "showSeconds": false,
   "useFahrenheit": true,
   "nightModeEnabled": false,
-  "animationSpeed": 2,
+  "animationSpeed": 3,
   "customAnimationDuration": 500,
   "wallpaperFillMode": "Fill",
   "blurredWallpaperLayer": false,
   "blurWallpaperOnOverview": false,
-  "showLauncherButton": false,
+  "showLauncherButton": true,
   "showWorkspaceSwitcher": true,
   "showFocusedWindow": true,
   "showWeather": true,
   "showMusic": true,
   "showClipboard": true,
-  "showCpuUsage": false,
-  "showMemUsage": false,
-  "showCpuTemp": false,
-  "showGpuTemp": false,
+  "showCpuUsage": true,
+  "showMemUsage": true,
+  "showCpuTemp": true,
+  "showGpuTemp": true,
   "selectedGpuIndex": 0,
   "enabledGpuPciIds": [],
   "showSystemTray": true,
@@ -36,29 +36,19 @@
   "showNotificationButton": true,
   "showBattery": true,
   "showControlCenterButton": true,
+  "showCapsLockIndicator": true,
   "controlCenterShowNetworkIcon": false,
   "controlCenterShowBluetoothIcon": false,
   "controlCenterShowAudioIcon": false,
+  "showPrivacyButton": true,
+  "privacyShowMicIcon": false,
+  "privacyShowCameraIcon": false,
+  "privacyShowScreenShareIcon": false,
   "controlCenterWidgets": [
-    {
-      "id": "volumeSlider",
-      "enabled": true,
-      "width": 50
-    },
-    {
-      "id": "brightnessSlider",
-      "enabled": true,
-      "width": 50
-    },
     {
       "id": "wifi",
       "enabled": true,
-      "width": 50
-    },
-    {
-      "id": "bluetooth",
-      "enabled": true,
-      "width": 50
+      "width": 100
     },
     {
       "id": "audioOutput",
@@ -71,9 +61,9 @@
       "width": 50
     },
     {
-      "id": "darkMode",
+      "id": "volumeSlider",
       "enabled": true,
-      "width": 50
+      "width": 100
     }
   ],
   "showWorkspaceIndex": true,
@@ -87,67 +77,156 @@
   "waveProgressEnabled": true,
   "clockCompactMode": false,
   "focusedWindowCompactMode": false,
-  "runningAppsCompactMode": true,
+  "runningAppsCompactMode": false,
   "keyboardLayoutNameCompactMode": false,
-  "runningAppsCurrentWorkspace": false,
+  "runningAppsCurrentWorkspace": true,
   "runningAppsGroupByApp": false,
-  "clockDateFormat": "ddd d MMM yyyy",
-  "lockDateFormat": "",
-  "mediaSize": 2,
+  "clockDateFormat": "dddd, MMMM d",
+  "lockDateFormat": "dddd, MMMM d",
+  "mediaSize": 1,
   "dankBarLeftWidgets": [
-    "workspaceSwitcher",
     {
-      "id": "music",
+      "id": "spacer",
+      "enabled": true,
+      "size": 5
+    },
+    {
+      "id": "launcherButton",
+      "enabled": true
+    },
+    {
+      "id": "spacer",
+      "enabled": true,
+      "size": 5
+    },
+    {
+      "id": "separator",
+      "enabled": true
+    },
+    {
+      "id": "spacer",
+      "enabled": true,
+      "size": 5
+    },
+    {
+      "id": "workspaceSwitcher",
       "enabled": true
     }
   ],
   "dankBarCenterWidgets": [
     {
-      "id": "focusedWindow",
+      "id": "spacer",
+      "enabled": true,
+      "size": 10
+    },
+    {
+      "id": "runningApps",
       "enabled": true
+    },
+    {
+      "id": "spacer",
+      "enabled": true,
+      "size": 10
     }
   ],
   "dankBarRightWidgets": [
     {
+      "id": "spacer",
+      "enabled": true,
+      "size": 10
+    },
+    {
+      "id": "systemUpdate",
+      "enabled": true
+    },
+    {
+      "id": "spacer",
+      "enabled": true,
+      "size": 5
+    },
+    {
+      "id": "separator",
+      "enabled": true
+    },
+    {
+      "id": "spacer",
+      "enabled": true,
+      "size": 5
+    },
+    {
+      "id": "privacyIndicator",
+      "enabled": true
+    },
+    {
+      "id": "vpn",
+      "enabled": true
+    },
+    {
+      "id": "spacer",
+      "enabled": true,
+      "size": 5
+    },
+    {
       "id": "clipboard",
       "enabled": true
+    },
+    {
+      "id": "spacer",
+      "enabled": true,
+      "size": 5
     },
     {
       "id": "systemTray",
       "enabled": true
     },
     {
+      "id": "separator",
+      "enabled": true
+    },
+    {
+      "id": "spacer",
+      "enabled": true,
+      "size": 5
+    },
+    {
       "id": "notificationButton",
       "enabled": true
     },
     {
-      "id": "clock",
-      "enabled": true
+      "id": "spacer",
+      "enabled": true,
+      "size": 5
     },
     {
       "id": "controlCenterButton",
       "enabled": true
+    },
+    {
+      "id": "spacer",
+      "enabled": true,
+      "size": 5
     }
   ],
   "dankBarWidgetOrder": [],
   "appLauncherViewMode": "list",
   "spotlightModalViewMode": "list",
   "sortAppsAlphabetically": true,
+  "appLauncherGridColumns": 6,
   "weatherLocation": "City of Fulton, 13069",
   "weatherCoordinates": "43.3228460,-76.4171590",
   "useAutoLocation": false,
   "weatherEnabled": true,
   "networkPreference": "auto",
   "vpnLastConnected": "",
-  "iconTheme": "System Default",
+  "iconTheme": "Adwaita",
   "launcherLogoMode": "os",
   "launcherLogoCustomPath": "",
-  "launcherLogoColorOverride": "surface",
+  "launcherLogoColorOverride": "primary",
   "launcherLogoColorInvertOnMode": false,
   "launcherLogoBrightness": 0.5,
   "launcherLogoContrast": 1,
-  "launcherLogoSizeOffset": 6,
-  "fontFamily": "Noto Sans",
+  "launcherLogoSizeOffset": 5,
+  "fontFamily": "Noto Sans Test",
   "monoFontFamily": "Noto Sans Mono",
   "fontWeight": 400,
   "fontScale": 1,
@@ -163,7 +242,7 @@
   "soundNewNotification": true,
   "soundVolumeChanged": true,
   "soundPluggedIn": true,
-  "acMonitorTimeout": 1800,
+  "acMonitorTimeout": 7200,
   "acLockTimeout": 900,
   "acSuspendTimeout": 0,
   "acSuspendBehavior": 0,
@@ -176,9 +255,14 @@
   "loginctlLockIntegration": true,
   "launchPrefix": "",
   "brightnessDevicePins": {},
+  "wifiNetworkPins": {},
+  "bluetoothDevicePins": {},
+  "audioInputDevicePins": {},
+  "audioOutputDevicePins": {},
   "gtkThemingEnabled": false,
   "qtThemingEnabled": false,
   "syncModeWithPortal": true,
+  "terminalsAlwaysDark": true,
   "showDock": false,
   "dockAutoHide": false,
   "dockGroupByApp": false,
@@ -191,6 +275,7 @@
   "dockIndicatorStyle": "circle",
   "notificationOverlayEnabled": false,
   "dankBarAutoHide": false,
+  "dankBarAutoHideDelay": 250,
   "dankBarOpenOnOverview": false,
   "dankBarVisible": true,
   "dankBarSpacing": 4,
@@ -202,10 +287,10 @@
   "dankBarGothCornersEnabled": false,
   "dankBarGothCornerRadiusOverride": false,
   "dankBarGothCornerRadiusValue": 12,
-  "dankBarBorderEnabled": false,
-  "dankBarBorderColor": "surfaceText",
+  "dankBarBorderEnabled": true,
+  "dankBarBorderColor": "secondary",
   "dankBarBorderOpacity": 1,
-  "dankBarBorderThickness": 1,
+  "dankBarBorderThickness": 2,
   "popupGapsAuto": true,
   "popupGapsManual": 4,
   "modalDarkenBackground": true,
@@ -217,8 +302,24 @@
   "notificationTimeoutNormal": 5000,
   "notificationTimeoutCritical": 0,
   "notificationPopupPosition": 0,
-  "osdAlwaysShowValue": false,
+  "osdAlwaysShowValue": true,
+  "osdPosition": 0,
+  "osdVolumeEnabled": true,
+  "osdBrightnessEnabled": true,
+  "osdIdleInhibitorEnabled": true,
+  "osdMicMuteEnabled": true,
+  "osdCapsLockEnabled": true,
+  "osdPowerProfileEnabled": true,
   "powerActionConfirm": true,
+  "powerMenuActions": [
+    "reboot",
+    "logout",
+    "poweroff",
+    "lock",
+    "restart"
+  ],
+  "powerMenuDefaultAction": "logout",
+  "powerMenuGridLayout": true,
   "customPowerActionLock": "",
   "customPowerActionLogout": "",
   "customPowerActionSuspend": "",
@@ -228,25 +329,16 @@
   "updaterUseCustomCommand": false,
   "updaterCustomCommand": "",
   "updaterTerminalAdditionalParams": "",
+  "displayNameMode": "system",
   "screenPreferences": {
-    "notifications": [
+    "dankBar": [
       "all"
     ],
-    "toast": [
-      "all"
-    ],
-    "systemTray": [
-      "all"
-    ],
-    "notepad": [
-      "all"
-    ]
+    "dock": []
   },
   "showOnLastDisplay": {
-    "notifications": true,
-    "toast": true,
-    "notepad": true,
-    "systemTray": true
+    "dankBar": true,
+    "dock": false
   },
   "configVersion": 1
 }
