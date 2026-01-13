@@ -19,3 +19,23 @@ profiles:
     dotfiles:
     - f_dms_default
     - f_hyprland_nsweeting
+  defiant:
+    dotfiles:
+    - f_dms_default
+    - f_hyprland_nsweeting
+  intrepid:
+    dotfiles:
+    - f_dms_default
+    - f_hyprland_nsweeting
+  dauntless:
+    dotfiles:
+    - f_dms_default
+    - f_hyprland_nsweeting
+  titan:
+    dotfiles:
+    - f_dms_default
+    - f_hyprland_nsweeting
+  equinox:
+    dotfiles:
+    - f_dms_default
+    - f_hyprland_nsweeting
