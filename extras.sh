@@ -18,6 +18,9 @@ sudo pacman -Syu
 # Define all AUR packages to be installed via paru
 aur=(
     # --- Base System & Core Utilities ---
+    "cava"
+    "i2c-tools"
+    
     "net-tools"
     "bind"
     "wireless_tools"
@@ -60,6 +63,20 @@ aur=(
     "docker-compose"
     "filezilla"
     "scrcpy"
+    "VSCodium"
+    "Remmina"
+    "FreeRDP"
+    "Remote-Desktop-Manager"
+    "Zoom Workplace"
+    "Samba"
+    "Cups"
+    "Cups-PDF"
+    "Sharepoint-Sync"
+    "VMware Workstation"
+    "Wireshark"
+    "Docker"
+    "Docker-Compose"
+    "Lazydocker"
     
 )
 # Loop through each package in the array

@@ -10,15 +10,16 @@
 # CatchyOS (hyprland)                                              [#]
 # DankLinux DMS Setup                                              [#]
 ######################################################################
-##### [ Configuration Check List ] ######################## [ Status ]
-# Run pacman -Syu for updates                                 [ Done ]
-# Install dotdrop via paru                                    [ Done ]
-# Use Dotdrop to install the dotfiles                         [ Done ]
-# Copy over Wallpapers folder                                 [ Done ]
+##### [ Configuration Steps ] ############################# [ Status ]
+# Run pacman -Syu for updates                                [ Coded ]
+# Install brave-bin via paru                                 [ Coded ]
+# Install dotdrop via paru                                   [ Coded ]
+# Use dotdrop to install the dotfiles                        [ Coded ]
+# Copy over Wallpapers folder                                [ Coded ]
 ######################################################################
-##### [ Dotdrop Check List ] ############################## [ Status ]
-# DarkMateruialShell                                          [ Done ]
-# Hyprland                                                    [ Done ]
+##### [ Dotdrop Files ] ################################### [ Status ]
+# DarkMaterialShell                                         [ Exists ]
+# Hyprland                                                  [ Exists ]
 ######################################################################
 
 # Exit the script if anything fails
@@ -26,6 +27,9 @@ set -e
 
 # Run pacman -Syu for updates
 sudo pacman -Syu
+
+# Install dotdrop via paru
+paru -S --noconfirm "brave-bin"
 
 # Install dotdrop via paru
 paru -S --noconfirm "dotdrop"
