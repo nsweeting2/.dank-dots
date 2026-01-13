@@ -9,7 +9,8 @@
 
 ##### [ Packages] ########################################### [ Status ]
 # VSCodium                                                    [ Done ]
-# Remmina                                                     [ Done ]
+# Remmina
+# FreeRDP                                                    [ Done ]
 # Remote-Desktop-Manager                                      [ Done ]
 # Zoom Workplace                                              [ Done ]
 # Samba

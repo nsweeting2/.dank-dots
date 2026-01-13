@@ -11,36 +11,11 @@ dotfiles:
   f_dms_default:
     src: config/DankMaterialShell/settings.json
     dst: ~/.config/DankMaterialShell/settings.json
-  f_hyprland_default:
+  f_hyprland_nsweeting:
     src: config/hypr/hyprland.conf
     dst: ~/.config/hypr/hyprland.conf
-  f_hyprland_default_monitors:
-    src: config/hypr/default_monitors.conf
-    dst: ~/.config/hypr/monitors.conf
-  f_hyprland_defiant_monitors:
-    src: config/hypr/defiant_monitors.conf
-    dst: ~/.config/hypr/monitors.conf
-  f_hyprland_equinox_monitors:
-    src: config/hypr/defiant_monitors.conf
-    dst: ~/.config/hypr/monitors.conf
 profiles:
   default:
     dotfiles:
     - f_dms_default
-    - f_hyprland_default
-    - f_hyprland_default_monitors
-  defiant:
-    dotfiles:
-    - f_dms_default
-    - f_hyprland_default
-    - f_hyprland_defiant_monitors
-  equinox:
-    dotfiles:
-    - f_dms_default
-    - f_hyprland_default
-    - f_hyprland_equinox_monitors
-  titan:
-    dotfiles:
-    - f_dms_default
-    - f_hyprland_default
-    - f_hyprland_default_monitors
+    - f_hyprland_nsweeting

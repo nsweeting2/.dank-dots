@@ -6,13 +6,12 @@
 
 # Author: nsweeting2
 
-##### [ Prerequisites ] ########################################## [ ]
-# CatchyOS (no desktop)                                            [ ]
-# DankLinux Suite                                                  [ ]
+##### [ Prerequisites ] ########################################## [#]
+# CatchyOS (hyprland)                                              [#]
+# DankLinux DMS Setup                                              [#]
 ######################################################################
 ##### [ Configuration Check List ] ######################## [ Status ]
 # Run pacman -Syu for updates                                 [ Done ]
-# Add hyprland to bash_profile for tty1 logins                [ Done ]
 # Install dotdrop via paru                                    [ Done ]
 # Use Dotdrop to install the dotfiles                         [ Done ]
 # Copy over Wallpapers folder                                 [ Done ]
@@ -27,9 +26,6 @@ set -e
 
 # Run pacman -Syu for updates
 sudo pacman -Syu
-
-# Add hyprland to bash_profile for tty1 logins
-echo 'if [[ $(tty) == /dev/tty1 ]]; then exec Hyprland; fi' >> ~/.bash_profile
 
 # Install dotdrop via paru
 paru -S --noconfirm "dotdrop"
