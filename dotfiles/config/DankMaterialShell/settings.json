@@ -146,7 +146,7 @@
   "appLauncherViewMode": "list",
   "spotlightModalViewMode": "list",
   "sortAppsAlphabetically": true,
-  "appLauncherGridColumns": 6,
+  "appLauncherGridColumns": 8,
   "spotlightCloseNiriOverview": true,
   "niriOverviewOverlayEnabled": true,
   "useAutoLocation": false,
@@ -176,7 +176,7 @@
   "launcherLogoColorInvertOnMode": false,
   "launcherLogoBrightness": 0.5,
   "launcherLogoContrast": 1,
-  "launcherLogoSizeOffset": 5,
+  "launcherLogoSizeOffset": 12,
   "fontFamily": "Noto Sans Test",
   "monoFontFamily": "Noto Sans Mono",
   "fontWeight": 400,
@@ -307,7 +307,7 @@
   "customPowerActionHibernate": "",
   "customPowerActionReboot": "",
   "customPowerActionPowerOff": "",
-  "updaterHideWidget": false,
+  "updaterHideWidget": true,
   "updaterUseCustomCommand": false,
   "updaterCustomCommand": "",
   "updaterTerminalAdditionalParams": "",
@@ -818,6 +818,17 @@
   "desktopWidgetGridSettings": {},
   "desktopWidgetInstances": [],
   "desktopWidgetGroups": [],
-  "builtInPluginSettings": {},
+  "builtInPluginSettings": {
+    "dms_settings_search": {
+      "trigger": "?",
+      "enabled": true
+    },
+    "dms_settings": {
+      "enabled": true
+    },
+    "dms_sysmon": {
+      "enabled": true
+    }
+  },
   "configVersion": 5
 }
